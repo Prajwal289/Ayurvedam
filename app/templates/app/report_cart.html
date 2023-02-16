@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">User</th>
+            <th scope="col">Product</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for c in data %}
+
+          <tr>
+            <th scope="row">{{c.id}}</th>
+            <td>{{c.quantity}}</td>
+            <td>{{c.user}}</td>
+            <td>{{c.product}}</td>
+          </tr>
+
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    </div>
+    <button onclick="window.print()" class="btn btn-primary align-center">Print</button>
+ </div>
+
+ {% endblock main-content %}
