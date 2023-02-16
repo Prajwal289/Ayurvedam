@@ -21,9 +21,9 @@ def customer(request):
         # print("serializer = ", serializer.data[2])
         # return JsonResponse(serializer.data, safe=False, status=200)
         # print(serializer.data)
-        
-        json_data = json.dumps(serializer.data)
-        print(json_data[0])            
+
+        # json_data = json.dumps(serializer.data)
+        # print(json_data[0])            
             # print("data",i)
             # labels = [i]
             # data = []
